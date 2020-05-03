@@ -1,6 +1,7 @@
 import React from "react";
 import {Avatar} from '@material-ui/core'
 import Imza from 'assets/img/beyazimza.png'
+import CV from 'assets/txt/cv.pdf'
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
@@ -20,7 +21,7 @@ export default function Navbar(props) {
                 (props.transparent ? "text-white" : "text-gray-800") +
                 " text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase"
               }
-              href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
+              /* href="#" */
             >
             <img style={{width : 200 ,height :40}} src={Imza} alt="hasantunahan" />
             </a>
@@ -46,25 +47,7 @@ export default function Navbar(props) {
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto">
               <li className="flex items-center">
-                <a
-                  className={
-                    (props.transparent
-                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-                      : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  }
-                  href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/profile"
-                >
-                  <i
-                    className={
-                      (props.transparent
-                        ? "lg:text-gray-300 text-gray-500"
-                        : "text-gray-500") +
-                      " far fa-file-alt text-lg leading-lg mr-2"
-                    }
-                  />{" "}
-                  Docs
-                </a>
+                
               </li>
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
@@ -98,17 +81,17 @@ export default function Navbar(props) {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
-                  href="#pablo"
+                  href="linkedin.com/in/hasan-tunahan-ak-0bb301182"
                 >
                   <i
                     className={
                       (props.transparent
                         ? "lg:text-gray-300 text-gray-500"
                         : "text-gray-500") +
-                      " fab fa-twitter text-lg leading-lg "
+                      " fab fa-linkedin-in text-lg leading-lg "
                     }
                   />
-                  <span className="lg:hidden inline-block ml-2">Tweet</span>
+                  <span className="lg:hidden inline-block ml-2">In</span>
                 </a>
               </li>
 
@@ -120,7 +103,7 @@ export default function Navbar(props) {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
-                  href="#pablo"
+                  href="https://github.com/hasantunahan"
                 >
                   <i
                     className={
@@ -130,12 +113,13 @@ export default function Navbar(props) {
                       " fab fa-github text-lg leading-lg "
                     }
                   />
-                  <span className="lg:hidden inline-block ml-2">Star</span>
+                  <span className="lg:hidden inline-block ml-2">github</span>
                 </a>
               </li>
 
               <li className="flex items-center">
-                <button
+                <a
+                  href ={CV}
                   className={
                     (props.transparent
                       ? "bg-white text-gray-800 active:bg-gray-100"
@@ -145,8 +129,8 @@ export default function Navbar(props) {
                   type="button"
                   style={{ transition: "all .15s ease" }}
                 >
-                  <i className="fas fa-arrow-alt-circle-down"></i> Download
-                </button>
+                  <i className="fas fa-arrow-alt-circle-down"></i> CV
+                </a>
               </li>
             </ul>
           </div>
